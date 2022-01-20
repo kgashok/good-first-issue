@@ -94,6 +94,7 @@ repositories = [
   'github.com/buildpacks/pack',
   'github.com/burtonator/polar-bookshelf',
   'github.com/buzzfeed/sso',
+  'github.com/BlitzKraft/saythanks.io'
   'github.com/c410-f3r/oapth',
   'github.com/CachetHQ/Cachet',
   'github.com/cake-build/cake',
