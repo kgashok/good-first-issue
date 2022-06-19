@@ -1,36 +1,32 @@
 version = 1
 
-test_patterns = [
-  'gfi/test_*.py',
-]
-
 [[analyzers]]
-  name = 'python'
-  enabled = true
+name = "python"
+enabled = true
 
   [analyzers.meta]
-  max_line_length = 100
+  runtime_version = "3.x.x"
 
 [[analyzers]]
 name = "javascript"
 enabled = true
 
-  [analyzers.meta]
-  environment = [
-    "nodejs",
-    "jest",
-    "browser"
-  ]
-  plugins = ["vue"]
-
-[[transformers]]
-  name = 'black'
-  enabled = true
-
-[[transformers]]
-  name = 'prettier'
-  enabled = true
+[[analyzers]]
+name = "test-coverage"
+enabled = true
 
 [[analyzers]]
 name = "secrets"
+enabled = true
+
+[[transformers]]
+name = "autopep8"
+enabled = true
+
+[[transformers]]
+name = "prettier"
+enabled = true
+
+[[transformers]]
+name = "standardjs"
 enabled = true
