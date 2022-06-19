@@ -3,7 +3,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  expandIssue(state, id) {
+  expandIssue (state, id) {
     if (state.activeIssue === id.toString()) {
       state.activeIssue = ''
     } else {
