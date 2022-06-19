@@ -35,7 +35,8 @@ def get_json_bin(json_bin_id, json_bin_key):
     if resp.status_code != 200:
         LOGGER.WARNING("Failed to fetch old tweets. Aborting!")
         sys.exit()
-    LOGGER.info("<%s>: Successfully fetched JSONBIN: %s", resp.status_code, resp.text)
+    LOGGER.info("<%s>: Successfully fetched JSONBIN: %s",
+                resp.status_code, resp.text)
     return json.loads(resp.text)
 
 
@@ -53,7 +54,8 @@ def update_json_bin(new, json_bin_id, json_bin_key):
 
 class GoodFirstTwitter:
     def __init__(self):
-        self.twitter = Twython(APP_KEY, APP_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+        self.twitter = Twython(APP_KEY, APP_SECRET,
+                               ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
         self.tweeted_already = get_json_bin(JSON_BIN_ID, JSON_BIN_KEY)
         self.tweeted_repos = {}
         self.tweet_count = 0

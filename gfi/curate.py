@@ -37,7 +37,8 @@ def main():
             break
         repositories.extend(repo["html_url"] for repo in result["items"])
 
-    repo_data_file = Path(__file__).parent / ".." / "data" / "repositories.toml"
+    repo_data_file = Path(__file__).parent / ".." / \
+        "data" / "repositories.toml"
     with repo_data_file.open() as file_desc:
         existing_repos = toml.load(file_desc)["repositories"]
     repositories = [
